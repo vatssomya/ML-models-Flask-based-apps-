@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 30px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Water Quality Prediction</h1>
+    <div class="container">
+        <form action="/result" method="post">
+            <label for="temperature">Temperature (°C):</label><br>
+            <input type="text" name="temperature" required><br>
+
+            <label for="ph">pH Level:</label><br>
+            <input type="text" name="ph" required><br>
+
+            <label for="nitrate">Nitrate Level (mg/L):</label><br>
+            <input type="text" name="nitrate" required><br>
+
+            <label for="dissolved_oxygen">Dissolved Oxygen (mg/L):</label><br>
+            <input type="text" name="dissolved_oxygen" required><br>
+
+            <label for="salinity">Salinity (ppt):</label><br>
+            <input type="text" name="salinity" required><br><br>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>

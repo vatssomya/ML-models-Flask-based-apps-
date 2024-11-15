@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f06292, #f8bbd0); /* Pink gradient */
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .result-title {
+            font-size: 2rem;
+            color: #ec407a; /* Pink */
+            margin-bottom: 1rem;
+        }
+
+        .result {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .go-back-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #ec407a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .go-back-button:hover {
+            background: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="result-title">Prediction Result</h1>
+        <div class="result">
+            <p>The predicted women's empowerment status is: <strong>{{ prediction }}</strong></p>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('index') }}" class="go-back-button">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
